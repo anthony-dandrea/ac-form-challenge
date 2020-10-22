@@ -1,0 +1,33 @@
+.topBlurb {
+  display: block;
+  padding: #{$gutter / 2} $gutter;
+  background: $bgDark;
+  color: $altTextColor;
+  border-radius: $borderRadiusCurved;
+  position: relative;
+  margin-bottom: 1em;
+
+  &.hidden {
+    display: none;
+  }
+
+  sup {
+    vertical-align: super;
+    font-size: .8em;
+  }
+
+  // CSS arrow. If this was something done more in one place.
+  // I would likely have use a shared mixin.
+  &::after {
+    $triangleSize: 10px;
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: $triangleSize solid transparent;
+    border-right: $triangleSize solid transparent;
+    border-top: $triangleSize solid $bgDark;
+    position: absolute;
+    top: 100%;
+    right: 5%;
+  }
+}

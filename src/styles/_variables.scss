@@ -1,0 +1,24 @@
+/*
+  I'm personally not a huge fan of color variables named directly after their color.
+  I'd rather the variables be named after their intent and purpose. Even if mildly generic.
+  Makes things less goofy to change down the line but YMMV 🤷‍♂️
+*/
+$textColor: #1f2129;
+$altTextColor: #356ae6;
+$accentColor: #19cca3;
+$accentColorLight: #b6f2e4;
+$bgLight: #fafbff;
+$bgDark: #e3ebfc;
+$white: #fff;
+$boxColor: #ced3e0;
+$boxShadow: 0px 0px 8px 0px $boxColor;
+
+// Padding/Gutters
+$gutter: 1em;
+
+// Fonts
+$fontFamilyBase: 'IBM Plex Sans', sans-serif;
+$fontFamilyHeading: 'Poppins', sans-serif;
+
+// Misc
+$borderRadiusCurved: 6px;

@@ -1,0 +1,81 @@
+.donationForm {
+  background: $white;
+  color: $textColor;
+  box-shadow: $boxShadow;
+  border-radius: $borderRadiusCurved $borderRadiusCurved 0 0;
+  overflow: hidden;
+
+  div {
+    padding: $gutter;
+  }
+
+  h1 {
+    font: 1.5em $fontFamilyHeading;
+    margin-bottom: .5em;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  fieldset {
+    display: flex;
+    position: relative;
+
+    &::before {
+      content: '$';
+      color: $boxColor;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 1em;
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  input {
+    font-size: 1.5em;
+    font-weight: bold;
+    // Browsers handle input widths goofy inside of flexboxes
+    min-width: 0;
+    width: 100%;
+    flex-grow: 1;
+    padding: .5em 1em .5em 1.25em;
+    border: solid 1px $boxColor;
+    border-radius: $borderRadiusCurved 0 0 $borderRadiusCurved;
+    // Hide number scroller
+    appearance: textfield;
+
+    &::-webkit-inner-spin-button, 
+    &::-webkit-outer-spin-button { 
+      -webkit-appearance: none;
+    }
+
+    &:focus:invalid:not(:placeholder-shown) {
+      outline-color: red;
+    }
+  }
+
+  button {
+    color: $white;
+    background: $accentColor;
+    padding: 1em;
+    border-radius: 0 $borderRadiusCurved $borderRadiusCurved 0;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    user-select: none;
+    white-space: nowrap;
+    left: -3px;
+    position: relative;
+    cursor: pointer;
+    transition: background .25s ease;
+
+    &:hover, &:focus {
+      background: darken($accentColor, 15%);
+    }
+  }
+}

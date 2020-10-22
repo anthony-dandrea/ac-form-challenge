@@ -1,0 +1,207 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+  I'm personally not a huge fan of color variables named directly after their color.
+  I'd rather the variables be named after their intent and purpose. Even if mildly generic.
+  Makes things less goofy to change down the line but YMMV 🤷‍♂️
+*/
+.donationForm {
+  background: #fff;
+  color: #1f2129;
+  box-shadow: 0px 0px 8px 0px #ced3e0;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden; }
+  .donationForm div {
+    padding: 1em; }
+  .donationForm h1 {
+    font: 1.5em "Poppins", sans-serif;
+    margin-bottom: .5em; }
+  .donationForm p {
+    margin-bottom: 1em; }
+  .donationForm fieldset {
+    display: flex;
+    position: relative; }
+    .donationForm fieldset::before {
+      content: '$';
+      color: #ced3e0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 1em; }
+    .donationForm fieldset.hidden {
+      display: none; }
+  .donationForm input {
+    font-size: 1.5em;
+    font-weight: bold;
+    min-width: 0;
+    width: 100%;
+    flex-grow: 1;
+    padding: .5em 1em .5em 1.25em;
+    border: solid 1px #ced3e0;
+    border-radius: 6px 0 0 6px;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield; }
+    .donationForm input::-webkit-inner-spin-button, .donationForm input::-webkit-outer-spin-button {
+      -webkit-appearance: none; }
+    .donationForm input:focus:invalid:not(:-moz-placeholder-shown) {
+      outline-color: red; }
+    .donationForm input:focus:invalid:not(:-ms-input-placeholder) {
+      outline-color: red; }
+    .donationForm input:focus:invalid:not(:placeholder-shown) {
+      outline-color: red; }
+  .donationForm button {
+    color: #fff;
+    background: #19cca3;
+    padding: 1em;
+    border-radius: 0 6px 6px 0;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    left: -3px;
+    position: relative;
+    cursor: pointer;
+    transition: background .25s ease; }
+    .donationForm button:hover, .donationForm button:focus {
+      background: #11886d; }
+
+.progressBar {
+  width: 100%;
+  height: 10px;
+  background: #b6f2e4; }
+  .progressBar::-webkit-progress-bar {
+    background: #b6f2e4; }
+  .progressBar::-webkit-progress-value {
+    background: #19cca3;
+    -webkit-transition: width 0.5s ease;
+    transition: width 0.5s ease; }
+  .progressBar::-moz-progress-bar {
+    background: #19cca3;
+    -moz-transition: width 0.5s ease;
+    transition: width 0.5s ease; }
+
+.topBlurb {
+  display: block;
+  padding: 0.5em 1em;
+  background: #e3ebfc;
+  color: #356ae6;
+  border-radius: 6px;
+  position: relative;
+  margin-bottom: 1em; }
+  .topBlurb.hidden {
+    display: none; }
+  .topBlurb sup {
+    vertical-align: super;
+    font-size: .8em; }
+  .topBlurb::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #e3ebfc;
+    position: absolute;
+    top: 100%;
+    right: 5%; }
+
+.srOnly {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+*, *::after, *::before {
+  box-sizing: border-box; }
+
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  width: 100%;
+  background: #fafbff;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #1f2129;
+  line-height: 1.5; }
+
+main {
+  width: 400px;
+  max-width: 100%;
+  margin: auto 1em; }
+
+strong {
+  font-weight: bold; }
+
+/*
+  Hide focus styles on clicks but NOT on tabs for A11Y.
+  Note: Not widely supported but still kinda neato.
+  https://matthiasott.com/notes/focus-visible-is-here
+*/
+:focus:not(:focus-visible) {
+  outline: 0; }
+
+.reset {
+  border: 1px solid #ced3e0;
+  font-size: 1em;
+  background: transparent;
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+
+.jsBanner {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  background: #19cca3;
+  text-align: center; }

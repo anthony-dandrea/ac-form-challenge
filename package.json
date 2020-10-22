@@ -1,0 +1,29 @@
+{
+  "name": "ac-form-challenge",
+  "version": "1.0.0",
+  "description": "Form code challenge",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "NODE_ENV=development gulp",
+    "build": "NODE_ENV=production gulp build"
+  },
+  "author": "anthony.dandrea@me.com",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-optional-chaining": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "babel-preset-minify": "^0.5.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-load-plugins": "^2.0.5",
+    "gulp-sass": "^4.1.0",
+    "gulp-serve": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  }
+}

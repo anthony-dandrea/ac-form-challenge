@@ -1,0 +1,75 @@
+// Deps
+@import 'reset';
+@import 'variables';
+// Components
+@import 'donationForm';
+@import 'progressBar';
+@import 'topBlurb';
+
+// Only show for screenreaders
+.srOnly {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: $bgLight;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  font-family: $fontFamilyBase;
+  color: $textColor;
+  // Recommended line-height is at least 1.5 for a11y
+  // https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-visual-presentation
+  line-height: 1.5;
+}
+
+main {
+  width: 400px;
+  max-width: 100%;
+  margin: auto $gutter;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/*
+  Hide focus styles on clicks but NOT on tabs for A11Y.
+  Note: Not widely supported but still kinda neato.
+  https://matthiasott.com/notes/focus-visible-is-here
+*/
+:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+.reset {
+  border: 1px solid $boxColor;
+  font-size: 1em;
+  background: transparent;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.jsBanner {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: $white;
+  background: $accentColor;
+  text-align: center;
+}

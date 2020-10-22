@@ -1,0 +1,12 @@
+# dependencies
+/node_modules
+# IDE
+.vscode
+# misc
+.DS_Store
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.sass-cache
+*.map
