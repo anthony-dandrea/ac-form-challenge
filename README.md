@@ -2,6 +2,8 @@
 
 See live example on [GitHub Pages](https://anthony-dandrea.github.io/ac-form-challenge/build/index.html).
 
+Also checkout my [Google PageSpeed scores](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fanthony-dandrea.github.io%2Fac-form-challenge%2Fbuild%2Findex.html&tab=mobile).
+
 ## Setup
 1. Setup node & npm. I'm using `v12.16.1` but I'd imagine most other versions work just fine as well.
 2. Install packages. `npm i`.
