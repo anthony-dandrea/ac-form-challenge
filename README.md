@@ -17,5 +17,5 @@ Also checkout my [Google PageSpeed scores](https://developers.google.com/speed/p
 - There is a "reset" button in the bottom right corner for resetting the form.
 - Data is saved via `sessionStorage` so it will persist upon refresh.
 - I'm leveraging a lot of HTML5 validation. I prefer this as it usually handles a lot of the a11y heavy lifting for you.
-- Some of the colors have A11Y violations due to contrast. Ideally we'd go back to UX and explore possibly finding better color combinations. [White on mint](https://color.a11y.com/ContrastPair/?bgcolor=19cca3&fgcolor=ffffff). [Ocean on Lavender](https://color.a11y.com/ContrastPair/?bgcolor=E3EBFC&fgcolor=356AE6).
+- Some of the colors have a11y violations due to contrast. Ideally we'd go back to UX and explore possibly finding better color combinations. [White on mint](https://color.a11y.com/ContrastPair/?bgcolor=19cca3&fgcolor=ffffff). [Ocean on Lavender](https://color.a11y.com/ContrastPair/?bgcolor=E3EBFC&fgcolor=356AE6).
 - I chose `em` units with a base `font-size: 18px;` on the `<body>`. Mostly just chose this for speed as I was eyeballing the sizes in the PDF.
