@@ -121,7 +121,6 @@ const onDonate = ({ goal, current, difference, donors }) => {
 // Initialize form
 const fund = new ProjectFund(initConfig, { onDonate, onDone });
 
-// Add event listener
 form?.addEventListener('submit', (e) => {
   e.preventDefault();
   if (amount) {
@@ -137,7 +136,8 @@ reset?.addEventListener('click', () => {
   }
 });
 
-// Set four days from now time tag
+// Set four days from now for time tag
+// IRL, for this you would likely have a fixed date for the end of the funding.
 const futureDate = new Date();
 futureDate.setDate(futureDate.getDate() + 4); // 4 days ahead
 time.dateTime = `${futureDate.getFullYear()}-${futureDate.getMonth() + 1}-${futureDate.getDate()}`;
